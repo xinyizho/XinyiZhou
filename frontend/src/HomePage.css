@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    margin: 0px;
+}
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    opacity: 1;
+}
+.homepage::before{
+    content: ' ';
+    height: 100vh;
+    width:100vw;
+    position:absolute;
+       /* Background image setup */
+       background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.6;
+    z-index: -100;
+}
+
+.header h1 {
+    color: #fff; /* Changed to white for better visibility on potentially dark background images */
+    max-width: 600px;
+    text-shadow: 2px 2px 4px #000; /* Adds a subtle shadow to enhance legibility */
+}
+
+.content {
+    padding: 20px;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+.start-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.start-button:hover {
+    background-color: #45a049; /* Slightly darker green on hover for better user interaction feedback */
+}
